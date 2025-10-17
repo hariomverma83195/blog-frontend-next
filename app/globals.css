@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.sidebar-bg {
+  background-color: #272844;
+}
+
+.sidebar-active-item {
+  background-color: #3b3c66;
+  border-left: 4px solid #7c3aed;
+  color: white;
+}
+
+.initials-circle {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.tox-tinymce {
+  border-radius: 0.75rem !important;
+  border-width: 1px;
+  border-color: #e5e7eb;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.4);
+}
+
+.form-section {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.form-section:hover {
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.file-upload-label {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-upload-label:hover {
+  background-color: #f3f4f6;
+}
+
+.post-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.post-content pre {
+  background: #f4f4f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* |--------------------------------------------------------------------------
+| Custom Markdown Styles (.customCSS)
+|--------------------------------------------------------------------------
+| These styles are designed to override the default Tailwind Typography 
+| settings applied by 'prose prose-lg' for a unique blog look.
+*/
+
+.customCSS blockquote {
+    /* Overrides for Blockquotes */
+    border-left: 4px solid #4f46e5 !important; /* Tailwind Indigo-600 */
+    padding-left: 1.5rem !important;
+    color: #4b5563 !important; /* Gray-600 */
+    font-style: italic !important;
+    background-color: #f7f9fd !important; /* Light background for quote */
+    padding: 1rem 1.5rem !important;
+    border-radius: 0.5rem !important;
+}
+
+.customCSS pre {
+    /* Overrides for Code Blocks */
+    background-color: #1f2937 !important; /* Dark background (Gray-800) */
+    color: #f3f4f6 !important; /* Light text color (Gray-100) */
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !important;
+    overflow-x: auto !important;
+    /* Ensure code text inside PRE is visible */
+    white-space: pre !important; 
+}
+
+.customCSS a {
+    /* Overrides for Links */
+    color: #4f46e5 !important; /* Tailwind Indigo-600 */
+    text-decoration: underline !important;
+    transition: color 0.2s !important;
+    font-weight: 600 !important;
+}
+
+.customCSS a:hover {
+    color: #6366f1 !important; /* Tailwind Indigo-500 */
+}
+
+.customCSS h2, .customCSS h3 {
+    /* Style for Headings */
+    padding-bottom: 0.3em !important;
+    border-bottom: 1px solid #e5e7eb !important; /* Light separator line */
+    font-weight: 700 !important; /* Ensure they are bold */
+}
+
+.customCSS code {
+    /* Inline code styling */
+    color: #4f46e5 !important; /* Indigo-600 for inline code */
+    background-color: #eef2ff !important; /* Indigo-50 background */
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 0.3rem !important;
+    font-size: 0.9em !important;
+}
+
+.customCSS p {
+  text-align: justify !important;
+}
